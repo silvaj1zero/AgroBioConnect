@@ -1,0 +1,33 @@
+{
+  "name": "AgroBioConnect",
+  "short_name": "AgroBio",
+  "description": "Sistema Operacional do Bioinsumo — Rastreabilidade, Conformidade e Caderno de Campo",
+  "start_url": "/dashboard",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#1B4332",
+  "theme_color": "#1B4332",
+  "lang": "pt-BR",
+  "categories": ["agriculture", "business", "productivity"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Nova Atividade",
+      "url": "/fields/activity/new",
+      "description": "Registrar atividade no caderno de campo"
+    },
+    {
+      "name": "Scanner QR",
+      "url": "/scanner",
+      "description": "Escanear QR code de rastreabilidade"
+    }
+  ]
+}
