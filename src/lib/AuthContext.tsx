@@ -44,11 +44,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       return null
     }
 
-    // If no profile exists, create one
+    // If no profile exists, create one (upsert to handle conflicts)
     if (!data) {
       const { data: newProfile } = await (supabase
         .from('user_profiles') as any)
-        .insert({ id: userId, role: 'farmer' })
+        .upsert({ id: userId, role: 'farmer' }, { onConflict: 'id' })
         .select()
         .single()
       return newProfile as Profile | null
