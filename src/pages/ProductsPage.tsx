@@ -45,12 +45,12 @@ export function ProductsPage() {
             className="pl-9"
           />
         </div>
-        <Select value={category} onValueChange={(v: string) => setCategory(v as ProductCategory | '')}>
+        <Select value={category || 'all'} onValueChange={(v: string) => setCategory(v === 'all' ? '' : v as ProductCategory)}>
           <SelectTrigger className="w-full sm:w-[200px]">
             <SelectValue placeholder="Categoria" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">Todas</SelectItem>
+            <SelectItem value="all">Todas</SelectItem>
             {Object.entries(PRODUCT_CATEGORY_LABELS).map(([key, label]) => (
               <SelectItem key={key} value={key}>{label}</SelectItem>
             ))}

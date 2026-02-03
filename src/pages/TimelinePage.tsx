@@ -109,12 +109,12 @@ export function TimelinePage() {
 
       {/* Filters */}
       <div className="flex flex-col sm:flex-row gap-3">
-        <Select value={typeFilter} onValueChange={setTypeFilter}>
+        <Select value={typeFilter || 'all'} onValueChange={(v) => setTypeFilter(v === 'all' ? '' : v)}>
           <SelectTrigger className="w-full sm:w-[200px]">
             <SelectValue placeholder="Tipo de atividade" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">Todos</SelectItem>
+            <SelectItem value="all">Todos</SelectItem>
             {Object.entries(ACTIVITY_LABELS).map(([k, v]) => (
               <SelectItem key={k} value={k}>{v}</SelectItem>
             ))}

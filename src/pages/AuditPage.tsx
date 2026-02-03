@@ -88,23 +88,23 @@ export function AuditPage() {
 
       {/* Filters */}
       <div className="flex flex-col sm:flex-row gap-3">
-        <Select value={actionFilter} onValueChange={setActionFilter}>
+        <Select value={actionFilter || 'all'} onValueChange={(v) => setActionFilter(v === 'all' ? '' : v)}>
           <SelectTrigger className="w-full sm:w-[160px]">
             <SelectValue placeholder="Ação" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">Todas</SelectItem>
+            <SelectItem value="all">Todas</SelectItem>
             {Object.entries(ACTION_LABELS).map(([k, v]) => (
               <SelectItem key={k} value={k}>{v.label}</SelectItem>
             ))}
           </SelectContent>
         </Select>
-        <Select value={resourceFilter} onValueChange={setResourceFilter}>
+        <Select value={resourceFilter || 'all'} onValueChange={(v) => setResourceFilter(v === 'all' ? '' : v)}>
           <SelectTrigger className="w-full sm:w-[200px]">
             <SelectValue placeholder="Recurso" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="">Todos</SelectItem>
+            <SelectItem value="all">Todos</SelectItem>
             {RESOURCE_TYPES.map((r) => (
               <SelectItem key={r} value={r}>{r}</SelectItem>
             ))}

@@ -37,12 +37,23 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       .from('user_profiles')
       .select('*')
       .eq('id', userId)
-      .single()
+      .maybeSingle()
 
     if (error) {
       console.error('Failed to fetch profile:', error.message)
       return null
     }
+
+    // If no profile exists, create one
+    if (!data) {
+      const { data: newProfile } = await (supabase
+        .from('user_profiles') as any)
+        .insert({ id: userId, role: 'farmer' })
+        .select()
+        .single()
+      return newProfile as Profile | null
+    }
+
     return data as Profile
   }
 
