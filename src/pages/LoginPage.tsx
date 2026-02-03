@@ -60,7 +60,7 @@ export function LoginPage() {
           <div className="mx-auto mb-2 h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center">
             <Leaf className="h-6 w-6 text-primary" />
           </div>
-          <CardTitle className="text-2xl">AgroBioConnect</CardTitle>
+          <CardTitle className="text-2xl">AgroBio</CardTitle>
           <CardDescription>Sistema Operacional do Bioinsumo</CardDescription>
         </CardHeader>
         <CardContent>

@@ -20,7 +20,7 @@ export async function generateComplianceCertificate(opts: {
   doc.setFontSize(18)
   doc.setFont('helvetica', 'bold')
   doc.setTextColor(27, 67, 50) // #1B4332
-  doc.text('AgroBioConnect', w / 2, y, { align: 'center' })
+  doc.text('AgroBio', w / 2, y, { align: 'center' })
   y += 8
   doc.setFontSize(12)
   doc.setFont('helvetica', 'normal')
@@ -128,7 +128,7 @@ export async function generateComplianceCertificate(opts: {
   const footerY = doc.internal.pageSize.getHeight() - 15
   doc.setFontSize(7)
   doc.setTextColor(150)
-  doc.text(`Gerado em ${new Date().toLocaleString('pt-BR')} — AgroBioConnect`, w / 2, footerY, { align: 'center' })
+  doc.text(`Gerado em ${new Date().toLocaleString('pt-BR')} — AgroBio`, w / 2, footerY, { align: 'center' })
   doc.text('Este documento é gerado eletronicamente e não requer assinatura.', w / 2, footerY + 4, { align: 'center' })
 
   return doc
@@ -211,7 +211,7 @@ export async function generateFieldNotebookReport(opts: {
   const footerY = doc.internal.pageSize.getHeight() - 10
   doc.setFontSize(6)
   doc.setTextColor(150)
-  doc.text(`Gerado em ${new Date().toLocaleString('pt-BR')} — AgroBioConnect`, w / 2, footerY, { align: 'center' })
+  doc.text(`Gerado em ${new Date().toLocaleString('pt-BR')} — AgroBio`, w / 2, footerY, { align: 'center' })
 
   return doc
 }

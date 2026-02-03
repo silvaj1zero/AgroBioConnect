@@ -79,7 +79,7 @@ export function TracePublicPage() {
           <Leaf className="h-6 w-6 text-primary" />
         </div>
         <div>
-          <h1 className="text-xl font-bold text-primary">AgroBioConnect</h1>
+          <h1 className="text-xl font-bold text-primary">AgroBio</h1>
           <p className="text-xs text-muted-foreground">Rastreabilidade de Bioinsumos</p>
         </div>
       </div>
@@ -248,7 +248,7 @@ export function TracePublicPage() {
 
       {/* Footer */}
       <div className="text-center text-xs text-muted-foreground py-4">
-        <p>Dados verificados via AgroBioConnect</p>
+        <p>Dados verificados via AgroBio</p>
         <p>Sistema de rastreabilidade de bioinsumos</p>
       </div>
     </div>

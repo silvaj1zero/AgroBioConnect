@@ -15,7 +15,7 @@ export async function generateBatchLabel(data: QRData): Promise<jsPDF> {
   // Title
   doc.setFontSize(10)
   doc.setFont('helvetica', 'bold')
-  doc.text('AgroBioConnect', 38, 8)
+  doc.text('AgroBio', 38, 8)
 
   // Batch info
   doc.setFontSize(8)
@@ -78,7 +78,7 @@ export async function generateLabelSheet(items: QRData[]): Promise<jsPDF> {
     doc.setFontSize(9)
     doc.setFont('helvetica', 'bold')
     doc.setTextColor(0)
-    doc.text('AgroBioConnect', x + 30, y + 7)
+    doc.text('AgroBio', x + 30, y + 7)
 
     doc.setFontSize(7)
     doc.setFont('helvetica', 'normal')

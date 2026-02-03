@@ -29,7 +29,7 @@ export function DashboardPage() {
           Olá, {profile?.full_name?.split(' ')[0] ?? 'Produtor'}
         </h1>
         <p className="text-muted-foreground">
-          Bem-vindo ao AgroBioConnect. Gerencie sua biofábrica e talhões.
+          Bem-vindo ao AgroBio. Gerencie sua biofábrica e talhões.
         </p>
       </div>
 

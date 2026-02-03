@@ -24,7 +24,7 @@ export function PWAInstallBanner() {
     <div className="fixed bottom-20 md:bottom-4 left-4 right-4 md:left-auto md:right-4 md:w-80 z-50 bg-card border rounded-lg shadow-lg p-4 flex items-center gap-3">
       <Download className="h-5 w-5 text-primary flex-shrink-0" />
       <div className="flex-1 min-w-0">
-        <p className="text-sm font-medium">Instalar AgroBioConnect</p>
+        <p className="text-sm font-medium">Instalar AgroBio</p>
         <p className="text-xs text-muted-foreground">Acesse offline direto da tela inicial</p>
       </div>
       <div className="flex gap-1">
