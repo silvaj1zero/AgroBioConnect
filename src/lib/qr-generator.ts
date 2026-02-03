@@ -2,7 +2,7 @@ import QRCode from 'qrcode'
 
 const BASE_URL = typeof window !== 'undefined'
   ? `${window.location.origin}/trace`
-  : 'https://agrobioconnect.app/trace'
+  : 'https://agrobio.ai/trace'
 
 export interface QRData {
   batchId: string

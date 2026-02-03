@@ -1,6 +1,7 @@
 {
-  "name": "AgroBioConnect",
+  "name": "AgroBio",
   "short_name": "AgroBio",
+  "id": "ai.agrobio.app",
   "description": "Sistema Operacional do Bioinsumo — Rastreabilidade, Conformidade e Caderno de Campo",
   "start_url": "/dashboard",
   "scope": "/",
